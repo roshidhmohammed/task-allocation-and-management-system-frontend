@@ -1,14 +1,5 @@
 # Task allocation and management system - Frontend
 
-This frontend application provides a user-friendly interface to interact with a high-throughput log ingestion system.
-
-It enables:
-
-- Full-text search across logs
-- Advanced filtering based on multiple fields
-- Real-time log updates via WebSockets
-- Responsive UI for mobile and desktop
-
 # Instruction to set up the project on the local machine
 
 1. First, run the development server:
