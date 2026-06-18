@@ -84,13 +84,14 @@ const Table = ({
 
               {columns?.map((column) => (
                 <td key={column.key} className="px-6 py-4">
-  {column.key === "createdAt" ||
-  column.key === "dueDate"
-    ? dateFormatConversion(row[column.key])
-    : column.render
-    ? column.render(row)
-    : row[column.key]}
-</td>
+                  {column.key === "createdAt" || column.key === "dueDate"
+                    ? dateFormatConversion(row[column.key])
+                    : Array.isArray(row[column.key])
+                      ? row[column.key].join(",  ")
+                      : column.render
+                        ? column.render(row)
+                        : row[column.key]}
+                </td>
               ))}
               {actions && <td className="px-6 py-4">{actions(row)}</td>}
             </tr>

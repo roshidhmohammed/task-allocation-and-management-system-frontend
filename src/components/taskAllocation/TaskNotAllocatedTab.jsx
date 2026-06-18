@@ -19,13 +19,16 @@ const TaskNotAllocatedTab = () => {
     setSelectedTask(row);
     setShowUsersToBeAssigned(true);
     await axiosInstance
-      .get(`/user/all`, { withCredentials: true })
+      .get(`/user/all`, {
+        params: {
+          priority: row.priority,
+        },
+        withCredentials: true,
+      })
       .then((res) => {
         setUsers(res.data.data);
       })
-      .catch((error) => {
-       
-      });
+      .catch((error) => {});
   };
 
   const assignUser = async () => {
@@ -39,13 +42,14 @@ const TaskNotAllocatedTab = () => {
         { withCredentials: true },
       )
       .then((res) => {
-        alert.success(res.data.message)
+        alert.success(res.data.message);
       })
       .catch((err) => {
-        alert.error(err?.response?.data?.message)
+        alert.error(err?.response?.data?.message);
       });
     setShowUsersToBeAssigned(false);
   };
+
   return (
     <div>
       <Table

@@ -7,6 +7,10 @@ export const TaskAllocationTableColumns = [
       header: "Status",
       key: "status",
     },
+      {
+      header: "Skills",
+      key: "requiredSkills"
+    },
     {
       header: "Priority",
       key: "priority",

@@ -165,7 +165,7 @@ const CreateTask = ({ setCreateTaskModal }) => {
                   isMulti
                   placeholder="Type skill and press Enter"
                   onChange={(selectedOptions) => {
-                    field.onChange(selectedOptions.map((item) => item.value)) ||
+                    field.onChange(selectedOptions.map((item) => item.value + " ,")) ||
                       [];
                   }}
                 />
