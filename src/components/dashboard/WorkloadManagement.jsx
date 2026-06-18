@@ -1,5 +1,5 @@
 import Table from "../../common/ui/Table";
-import { WorkloadTableHeaderItems } from "../../constants/tableHeaders/WorkloadTableHeaders";
+import { WorkloadTableHeaderItems } from "../../constants/tableHeaders/workloadTableHeaders";
 import useFetchUsersWorkload from "../../hooks/useFetchUsersWorkload";
 
 const WorkLoadManagement = () => {

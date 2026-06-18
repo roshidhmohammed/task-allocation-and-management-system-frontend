@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Button from "../../common/ui/Button";
 import Table from "../../common/ui/Table";
-import { TaskAllocationTableColumns } from "../../constants/tableHeaders/TaskAllocationTableHeader";
+import { TaskAllocationTableColumns } from "../../constants/tableHeaders/taskAllocationTableHeader";
 import useFetchNotAllocatedTasks from "../../hooks/useFetchNotAllocatedTasks";
 import axiosInstance from "../../api/AxiosInstance";
-import { taskAssigningUsers } from "../../constants/tableHeaders/TaskAssigningUsers";
+import { taskAssigningUsers } from "../../constants/tableHeaders/taskAssigningUsers";
 import { alert } from "../../utils/alert";
 
 const TaskNotAllocatedTab = () => {
@@ -45,7 +45,6 @@ const TaskNotAllocatedTab = () => {
         alert.error(err?.response?.data?.message)
       });
     setShowUsersToBeAssigned(false);
-    console.log(selectedRows);
   };
   return (
     <div>

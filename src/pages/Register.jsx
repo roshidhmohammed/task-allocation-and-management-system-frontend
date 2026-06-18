@@ -23,7 +23,7 @@ const Register = () => {
   });
 
   const onSubmit = async(data) => {
-    await axiosInstance.post("/user", data)
+    await axiosInstance.post("/auth", data)
     .then((res)=>{
       alert.success(res.data.message)
       navigate("/login")

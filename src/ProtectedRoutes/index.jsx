@@ -15,7 +15,7 @@ function ProtectedRoute() {
 
     async function checkAuthorization() {
       try {
-        const res = await axiosInstance.get("/user/check-user-auth", {
+        const res = await axiosInstance.get("/auth/check-user-auth", {
           withCredentials: true,
         });
 

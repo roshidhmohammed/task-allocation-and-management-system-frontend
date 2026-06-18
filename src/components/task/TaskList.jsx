@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../../common/ui/Button";
 import Table from "../../common/ui/Table";
-import { taskTableHeaderColumns } from "../../constants/tableHeaders/TaskTableHeaders";
+import { taskTableHeaderColumns } from "../../constants/tableHeaders/taskTableHeaders";
 import useFetchAllTask from "../../hooks/useFetchAllTask";
 import SearchFilter from "./SearchFilter";
 import useDebounce from "../../hooks/useDebounce";

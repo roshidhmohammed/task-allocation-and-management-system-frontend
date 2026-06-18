@@ -22,7 +22,7 @@ const Login = () => {
   });
 
   const onSubmit = async(data) => {
-    await axiosInstance.post("/user/login",  data, {withCredentials: true})
+    await axiosInstance.post("/auth/login",  data, {withCredentials: true})
     .then((res)=>{
       alert.success(res.data.message)
       navigate("/")

@@ -1,9 +1,10 @@
 import Table from "../../common/ui/Table";
-import { TaskAllocationTableColumns } from "../../constants/tableHeaders/TaskAllocationTableHeader";
+import { TaskAllocationTableColumns } from "../../constants/tableHeaders/taskAllocationTableHeader";
 import useFetchAllocatedTasks from "../../hooks/useFetchAllocatedTasks";
 
 const TaskAllocatedTab = () => {
   const { data } = useFetchAllocatedTasks();
+
 
   return (
     <div>
